@@ -4,9 +4,8 @@ var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 var fs = require("fs");
 server.listen(process.env.PORT || 3000);
-console.log('data:' + "," + express + "," +  app + "," +  server);
 
-console.log('Server Running Test No4');
+console.log('Server Running Test No5');
 
 app.get("/", function(req, res){
 	res.sendFile(__dirname + "/index.html");	
