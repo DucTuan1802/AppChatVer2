@@ -3,13 +3,10 @@ var app = express();
 var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 var fs = require("fs");
-//server.listen(process.env.PORT || 3000);
-server.listen(process.env.PORT || 3000, function () {  //Updated
-  var addr = server.address();
-  console.log('   app listening on http://' + addr.address + ':' + addr.port);
-});
+server.listen(process.env.PORT || 3000);
+console.log('data:' + __dirname);
 
-console.log('Server Running Test No3');
+console.log('Server Running Test No4');
 
 app.get("/", function(req, res){
 	res.sendFile(__dirname + "/index.html");	
