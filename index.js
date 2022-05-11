@@ -3,7 +3,11 @@ var app = express();
 var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 var fs = require("fs");
-server.listen(process.env.PORT || 3000);
+//server.listen(process.env.PORT || 3000);
+server.listen(process.env.port, function () {  //Updated
+  var addr = server.address();
+  console.log('   app listening on http://' + addr.address + ':' + addr.port);
+});
 
 console.log('Server Running Test No2');
 
