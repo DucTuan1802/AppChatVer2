@@ -5,10 +5,7 @@ var io = require("socket.io")(server);
 var fs = require("fs");
 server.listen(process.env.PORT || 3000);
 
-
-var address = socket.handshake.address;
-console.log('New connection from ' + address.address + ':' + address.port);
-console.log('Server Running Test No6');
+console.log('Server Running Test No7');
 var arrayUser = [];
 var existFlag = true;
 io.sockets.on('connection',function(socket){
