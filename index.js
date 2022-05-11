@@ -4,8 +4,8 @@ var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 var fs = require("fs");
 //server.listen(process.env.PORT || 3000);
-app.listen(process.env.PORT || 3000, function () {  //Updated
-  var addr = app.address();
+server.listen(process.env.PORT || 3000, function () {  //Updated
+  var addr = server.address();
   console.log('   app listening on http://' + addr.address + ':' + addr.port);
 });
 
