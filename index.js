@@ -1,11 +1,11 @@
 var express = require("express");
 var app = express();
 var server = require("http").createServer(app);
-var io = require("socket.io").listen(server);
+var io = require("socket.io")(server);
 var fs = require("fs");
 server.listen(process.env.PORT || 3000);
 
-console.log('Server Running Test 2');
+console.log('Server Running Test No1');
 
 var arrayUser = [];
 var existFlag = true;
