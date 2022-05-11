@@ -4,7 +4,7 @@ var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 var fs = require("fs");
 server.listen(process.env.PORT || 3000);
-console.log('data:' + __dirname);
+console.log('data:' + "," + express + "," +  app + "," +  server);
 
 console.log('Server Running Test No4');
 
