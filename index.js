@@ -5,7 +5,11 @@ var io = require("socket.io")(server);
 var fs = require("fs");
 server.listen(process.env.PORT || 3000);
 
-console.log('Server Running Test No1');
+console.log('Server Running Test No2');
+
+app.get("/", function(req, res){
+	res.sendFile(__dirname + "/index.html");	
+});
 
 var arrayUser = [];
 var existFlag = true;
