@@ -4,7 +4,10 @@ var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 var fs = require("fs");
 server.listen(process.env.PORT || 3000, "0.0.0.0");
-console.log(req.hostname);
+app.get("/", function(req, res){
+	res.sendFile(__dirname + "/index.html");
+	console.log(req.ip);
+});
 console.log('Server Running Test No7');
 
 var arrayUser = [];
