@@ -1,10 +1,20 @@
-var express = require("express");
+//var express = require("express");
+//var app = express();
+//var server = require("http").createServer(app);
+//var io = require("socket.io")(server);
+//var fs = require("fs");
+//server.listen(process.env.PORT || 3000);
+//console.log('Server Running Test No7');
+
+const express = require('express')
+const path = require('path')
 var app = express();
-var server = require("http").createServer(app);
-var io = require("socket.io")(server);
-var fs = require("fs");
-server.listen(process.env.PORT || 3000);
-console.log('Server Running Test No7');
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+app.set('port', (process.env.PORT || 3000));
+
+console.log('Server Running Test No8');
 
 var arrayUser = [];
 var existFlag = true;
