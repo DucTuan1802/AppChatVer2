@@ -11,6 +11,7 @@ const path = require('path')
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var fs = require("fs");
 
 app.set('port', (process.env.PORT || 3000));
 
