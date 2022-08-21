@@ -16,6 +16,7 @@ var fs = require("fs");
 app.set('port', (process.env.PORT || 3000));
 
 console.log('Server Running Test No9');
+console.log('something new here');
 
 var arrayUser = [];
 var existFlag = true;
